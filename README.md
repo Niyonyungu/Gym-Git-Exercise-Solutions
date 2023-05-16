@@ -52,4 +52,25 @@ branch 'main' set up to track 'origin/main'.
 vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Git-exercises-solution (main)
 $
 
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Git-exercises-solution (main)
+$ git branch dev
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Git-exercises-solution (main)
+$ git checkout dev
+Switched to branch 'dev'
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Git-exercises-solution (dev)
+$ git branch test
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Git-exercises-solution (dev)
+$ git branch
+* dev
+  main
+  test
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Git-exercises-solution (dev)
+$ git branch --delete test
+Deleted branch test (was f8d3a37).
+
+
 ```
