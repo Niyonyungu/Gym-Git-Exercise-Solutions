@@ -301,3 +301,160 @@ $
 
 
 ```
+
+### Exercise 2
+
+```bash
+
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 /c/users/vainqueur/Desktop/Git-exercises-solution (main)
+$ git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 /c/users/vainqueur/Desktop/Git-exercises-solution (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        service.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 /c/users/vainqueur/Desktop/Git-exercises-solution (ft/service-redesign)
+$ git add service.html
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 /c/users/vainqueur/Desktop/Git-exercises-solution (ft/service-redesign)
+$ git commit -m "new change on service"
+[ft/service-redesign 3c47c8f] new change on service
+ 1 file changed, 19 insertions(+)
+ create mode 100644 service.html
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 /c/users/vainqueur/Desktop/Git-exercises-solution (ft/service-redesign)
+$ git push
+fatal: The current branch ft/service-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/service-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 /c/users/vainqueur/Desktop/Git-exercises-solution (ft/service-redesign)
+$
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 /c/users/vainqueur/Desktop/Git-exercises-solution
+$ git  git push --set-upstream origin ft/service-redesign
+git: 'git' is not a git command. See 'git --help'.
+
+The most similar command is
+        init
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 /c/users/vainqueur/Desktop/Git-exercises-solution
+$ git push --set-upstream origin ft/service-redesign
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 512 bytes | 512.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/Niyonyungu/Gym-Git-Exercise-Solutions/pull/new/ft/se
+remote:
+To https://github.com/Niyonyungu/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 /c/users/vainqueur/Desktop/Git-exercises-solution
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 /c/users/vainqueur/Desktop/Git-exercises-solution (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        service.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 /c/users/vainqueur/Desktop/Git-exercises-solution (main)
+$ git add service.html
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 /c/users/vainqueur/Desktop/Git-exercises-solution (main)
+$ git commit -m "change name of services"
+[main 3a5251c] change name of services
+ 1 file changed, 19 insertions(+)
+ create mode 100644 service.html
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 /c/users/vainqueur/Desktop/Git-exercises-solution (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 517 bytes | 517.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Niyonyungu/Gym-Git-Exercise-Solutions.git
+   8e564e2..3a5251c  main -> main
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 /c/users/vainqueur/Desktop/Git-exercises-solution (main)
+$ git checkout ft/
+ft/bundle-2           ft/service-redesign
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 /c/users/vainqueur/Desktop/Git-exercises-solution (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 /c/users/vainqueur/Desktop/Git-exercises-solution (ft/service-redesign)
+$ git merge main
+Auto-merging service.html
+CONFLICT (add/add): Merge conflict in service.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 /c/users/vainqueur/Desktop/Git-exercises-solution (ft/service-redesign|MERGING)
+$ git status
+On branch ft/service-redesign
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both added:      service.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 /c/users/vainqueur/Desktop/Git-exercises-solution (ft/service-redesign|MERGING)
+$ git add service.html
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 /c/users/vainqueur/Desktop/Git-exercises-solution (ft/service-redesign|MERGING)
+$ git commit -m "merged services"
+[ft/service-redesign 40583d9] merged services
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 /c/users/vainqueur/Desktop/Git-exercises-solution (ft/service-redesign)
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 370 bytes | 370.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Niyonyungu/Gym-Git-Exercise-Solutions.git
+   3c47c8f..40583d9  ft/service-redesign -> ft/service-redesign
+
+vainqueur@DESKTOP-KTN8E98 MINGW64 /c/users/vainqueur/Desktop/Git-exercises-solution (ft/service-redesign)
+$
+
+
+```
