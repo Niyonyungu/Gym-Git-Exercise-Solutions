@@ -218,6 +218,4 @@ HEAD is now at d021e92 about page and home page set up in exercise 2
 vainqueur@DESKTOP-KTN8E98 MINGW64 ~/Desktop/Git-exercises-solution (main)
 $
 
-
-
 ```
